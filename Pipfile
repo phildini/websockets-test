@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+black = "*"
+coverage = "*"
+django-bootstrap4 = "*"
+django-phonenumber-field = "*"
+django-webpack-loader = "*"
+flake8 = "*"
+model-mommy = "*"
+phonenumbers = "*"
+python-dotenv = "*"
+twilio = "*"
+whitenoise = "*"
+psycopg2-binary = "*"
+djangorestframework = "*"
+django-tokenauth = "*"
+channels = "*"
+pytest-django = "*"
+pytest-asyncio = "*"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
