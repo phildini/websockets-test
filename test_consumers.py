@@ -34,3 +34,15 @@ class TestWebsockets:
         await communicator.send_json_to({"type": "notify", "data": "who knows"})
         response = await communicator.receive_json_from()
         await communicator.disconnect()
+
+
+@pytest.mark.asyncio
+async def test_receives_data(settings):
+    communicator = WebsocketCommunicator(
+        application=application, path="/ws/notifications/"
+    )
+    connected, _ = await communicator.connect()
+    assert connected
+    await communicator.send_json_to({"type": "notify", "data": "who knows"})
+    response = await communicator.receive_json_from()
+    await communicator.disconnect()
